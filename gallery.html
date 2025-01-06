@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery - Gallery</title>
+    <style>
+        /* Reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Tampilan fleksibel untuk memastikan footer tetap di bawah */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        main {
+            flex: 1; /* Isi bagian utama untuk mengatur konten sebelum footer */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Galeri */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px; /* Menambah jarak antar item */
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px; /* Tinggi gambar diperpanjang */
+            object-fit: cover; /* Menjaga aspek rasio gambar */
+            display: block;
+        }
+
+        .gallery-item .info {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .info {
+            transform: translateY(0);
+        }
+
+        .gallery-item .submenu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            overflow-y: auto;
+        }
+
+        .gallery-item:hover .submenu {
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Art Gallery</h1>
+        <p>Explore our collection of stunning artwork</p>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <section id="gallery" class="gallery">
+            <div class="gallery-item">
+                <a href="detail-art1.html">
+                    <img src="C:\Users\user\Downloads\Hospital_in_Saint-Remy.jpg" alt="Art 1">
+                    <div class="info">Rumah Sakit Jiwa di Saint-Rémy-de -Provence</div>
+                    <div class="submenu">
+                        <h3>Rumah Sakit Jiwa di Saint-Rémy-de -Provence</h3>
+                        <p>Rumah Sakit Jiwa Saint-Paul, Saint-Rémy adalah sekumpulan lukisan yang dibuat oleh Vincent van Gogh saat ia menjadi pasien secara sukarela di Rumah Sakit Jiwa Saint-Paul di Paris, Prancis yang kemudian berganti nama menjadi Clinique Van Gogh, dari Mei 1889 sampai Mei 1890. Pada masa ia singgah disana, ia ditempatkan di lantai dasar rumah sakit, dan ia membuat lukisan-lukisan taman, yang ia saksikan di luar kamarnya dan beberapa potret orang di rumah sakit tersebut.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="detail-art2.html">
+                    <img src="c:\Users\user\OneDrive\Pictures\lukisan-vincent-van-gogh-7-db9fa22a3dba553c9f7f75f717182fb5 (1).avif" alt="Art 2">
+                    <div class="info">Starry Night (1889)</div>
+                    <div class="submenu">
+                        <h3>Starry Night (1889)</h3>
+                        <p>Starry Night (1889) adalah sebuah lukisan minyak di kanvas karya pelukis pasca-Impresionis Belanda Vincent van Gogh. Dilukis pada Juni 1889, lukisan tersebut menggambarkan pemandangan dari jendela yang menghadap ke arah timur dari kamar rumah sakit jiwanya di Saint-Rémy-de-Provence, tepat sebelum matahari terbit, dengan tambahan sebuah desa yang diidealkan</p>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="detail-art3.html">
+                    <img src="c:\Users\user\OneDrive\Pictures\1024px-Raden_Saleh_-_Diponegoro_arrest.jpg" alt="Art 3">
+                    <div class="info">Penangkapan Dipenorogo</div>
+                    <div class="submenu">
+                        <h3>Penangkapan Dipenorogo</h3>
+                        <p>Raden Saleh terutama dikenang karena lukisan historisnya, Penangkapan Pangeran Diponegoro, yang menggambarkan peristiwa pengkhianatan pihak Belanda kepada Pangeran Diponegoro yang mengakhiri Perang Jawa pada 1830.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Art Gallery.</p>
+    </footer>
+</body>
+</html>
